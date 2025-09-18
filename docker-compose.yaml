@@ -1,0 +1,17 @@
+version: '3.9'
+
+
+services:
+  db:
+    image: postgres:15
+    container_name: 'db_shopchik'
+    restart: 'always'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db_shopchik
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+
