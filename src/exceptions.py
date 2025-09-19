@@ -1,18 +1,18 @@
-class BaseException(Exception):
+class BaseExceptionError(Exception):
     description = None
 
 
-class ObjectNotFound(BaseException):
+class ObjectNotFound(BaseExceptionError):
     description = "Object not found"
 
 
-class UserNotFound(BaseException):
+class UserNotFound(BaseExceptionError):
     description = "User not found"
 
 
-class ProductNotFound(BaseException):
+class ProductNotFound(BaseExceptionError):
     description = "Product not found"
 
 
-class InvalidDateRangeError(BaseException):
+class InvalidDateRangeError(BaseExceptionError):
     description = "Invalid date range"

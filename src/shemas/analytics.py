@@ -2,7 +2,6 @@ from datetime import date
 from pydantic import BaseModel, Field
 
 
-
 class TopProductsOut(BaseModel):
     product_id: int
     product_name: str

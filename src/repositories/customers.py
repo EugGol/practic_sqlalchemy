@@ -24,8 +24,8 @@ class CustomerRepository(BaseRepository):
         return await self.session.execute(stmt).all()
     
     async def customer_exist(self, id: int):
-        stmt = select(Customers).where(id == id)
+        stmt = select(Customers).where(Customers.id == id)
         result = await self.session.execute(stmt).scalar().one_or_none()
         if result:
             return True
-        return UserNotFound
+        raise UserNotFound

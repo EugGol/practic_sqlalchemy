@@ -5,7 +5,7 @@ import uvicorn
 
 from src.api.customers import router as customer_router
 from src.api.orders import router as order_router
-from src.api.analystics import router as analystics
+from src.api.analytics import router as analytics
 from src.db.init_db import init_db
 
 
@@ -19,7 +19,7 @@ app = FastAPI(lifespan=lifespan)
 
 app.include_router(customer_router)
 app.include_router(order_router)
-app.include_router(analystics)
+app.include_router(analytics)
 
 
 if __name__ == "__main__":

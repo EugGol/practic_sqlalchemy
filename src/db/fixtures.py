@@ -1,7 +1,10 @@
 import asyncio
 from datetime import datetime
-from src.repositories.base import OrderRepository, ProductRepository, CustomerRepository, OrderItemRepository
 from src.db.config import AsyncSessionLocal
+from src.repositories.customers import CustomerRepository
+from src.repositories.products import ProductRepository
+from src.repositories.orders import OrderRepository
+from src.repositories.order_items import OrderItemRepository
 
 customers = [
     {"name": "Alice Johnson", "email": "alice.johnson@example.com"},

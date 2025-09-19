@@ -2,9 +2,9 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 from src.models.models import OrderItems, Orders, Products
 from src.repositories.base import BaseRepository
-from src.shemas.analystics import TopProductsOut
+from src.shemas.analytics import TopProductsOut
 
-class AnalysticsRepository(BaseRepository):
+class AnalyticsRepository(BaseRepository):
     def __init__(self, session: AsyncSession, model=None):
         super().__init__(session, model)
 

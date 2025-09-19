@@ -14,8 +14,6 @@ class OrderService(BaseService):
             await self.uow.customer.get_one(id=request.user_id)
         except ObjectNotFound:
             raise UserNotFound
-        except ProductNotFound:
-            raise ProductNotFound
         new_order = await self.uow.order.create(
             user_id=request.user_id, created_at=request.created_at
         )
