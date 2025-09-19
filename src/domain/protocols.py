@@ -2,6 +2,7 @@ from typing import Protocol
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from src.repositories.analystics import AnalysticsRepository
 from src.repositories.customers import CustomerRepository
 from src.repositories.orders import OrderRepository
 from src.repositories.order_items import OrderItemRepository
@@ -14,3 +15,4 @@ class UnitOfWork(Protocol):
     order: OrderRepository
     order_item: OrderItemRepository
     product: ProductRepository
+    analystics: AnalysticsRepository

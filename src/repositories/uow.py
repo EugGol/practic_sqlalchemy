@@ -1,4 +1,5 @@
 from sqlalchemy.ext.asyncio import AsyncSession
+from src.repositories.analystics import AnalysticsRepository
 from src.repositories.customers import CustomerRepository
 from src.repositories.orders import OrderRepository
 from src.repositories.order_items import OrderItemRepository
@@ -12,3 +13,4 @@ class SqlAlchemyUoW:
         self.product = ProductRepository(session)
         self.order = OrderRepository(session)
         self.order_item = OrderItemRepository(session)
+        self.analystics = AnalysticsRepository(session)

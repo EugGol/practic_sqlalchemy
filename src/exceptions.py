@@ -12,3 +12,7 @@ class UserNotFound(BaseException):
 
 class ProductNotFound(BaseException):
     description = "Product not found"
+
+
+class InvalidDateRangeError(BaseException):
+    description = "Invalid date range"
